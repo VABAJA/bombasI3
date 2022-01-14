@@ -175,6 +175,7 @@ img {
 .icon {
   max-width: 5rem;
   max-height: 5rem;
+
   
 }
 .nosotros__item {
@@ -217,20 +218,51 @@ img {
 
 .form {
   font-family: var(--fuenteParrafo);
+  font-size: 2rem;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-around;
+  
+  
+}
+.cont-contacto {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/julian-hochgesang-psGV5KhidlY-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.campo input[type="text"],
+.campo input[type="tel"],
+.campo input[type="email"],
+.campo textarea {
+    width: 100%;
+    padding: .5rem;
+    border: none;
+    border-radius: .5rem;
 }
 
 .fieldset {
   display: flex;
   justify-content: center;
   
-
 }
+legend, label {
+  color: var(--blanco);
+}
+.boton {
+  display: flex;
+  justify-content: center;
+  
+}
+
 .btn {
   font-family: var(--fuenteHeading);
   color: var(--negro);
   
   border: .1rem solid #77bcd3;
-  border-radius: 6rem;
+  border-radius: 1rem;
   
 }
 .btn:hover {
@@ -238,4 +270,10 @@ img {
   color: var(--hover);
 
 } 
+@media (max-width: 768px) {
+  .form {
+    font-size: 1rem;
+  }
+    
+}
 
