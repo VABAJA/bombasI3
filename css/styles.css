@@ -13,7 +13,7 @@ calvin S
   --blanco: #ffff;
   --fondo: linear-gradient(rgb(189, 189, 189), rgb(255, 255, 255));
   --navtext: #ffffff;
-  --hover: rgb(15, 15, 37);
+  --hover: rgb(0, 0, 189);
   --negro: rgb(0, 0, 0);
 }
 
@@ -212,7 +212,7 @@ img {
   align-content: flex-end;
 }
 .texto__made {
-  color: var(--navtext);
+  color: var(--negro);
   font-size: 2rem;
 }
 
@@ -313,7 +313,12 @@ img {
 ┌─┐┌─┐┌┬┐┌─┐┬  ┌─┐┌─┐┌─┐
 │  ├─┤ │ ├─┤│  │ ││ ┬│ │
 └─┘┴ ┴ ┴ ┴ ┴┴─┘└─┘└─┘└─┘ */
-
+.catalogo {
+  height: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* 
 ┌─┐┌─┐┌┐┌┌┬┐┌─┐┌─┐┌┬┐┌─┐
 │  │ ││││ │ ├─┤│   │ │ │
