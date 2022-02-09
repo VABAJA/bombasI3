@@ -9,7 +9,6 @@ calvin S
 :root {
   --fuenteHeading: "Open Sans", sans-serif;
   --fuenteParrafo: "PT Sans", sans-serif;
-
   --blanco: #ffff;
   --fondo: linear-gradient(rgb(189, 189, 189), rgb(255, 255, 255));
   --navtext: #ffffff;
@@ -20,6 +19,8 @@ calvin S
 body {
   background: var(--fondo);
   background-size: 400% 400%;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
 }
 
 /* 
@@ -38,13 +39,17 @@ a {
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
   box-sizing: border-box;
-  font-size: 62.5%; /*1 rem = 10px*/
+  font-size: 62.5%;
+
+  /*1 rem = 10px*/
 }
+
 *,
 *:before,
 *:after {
   box-sizing: inherit;
 }
+
 h1,
 h2,
 h3,
@@ -52,76 +57,96 @@ h4,
 p {
   font-family: var(--fuenteHeading);
 }
+
 h1 {
   font-size: 1rem;
 }
+
 h2 {
   font-size: 0.8rem;
 }
+
 h3 {
   font-size: 0.5rem;
 }
+
 h4 {
   font-size: 0.3rem;
 }
+
 p {
   font-size: 0.1rem;
 }
+
 @media (min-width: 183px) {
   h1 {
     font-size: 3rem;
   }
+
   h2 {
     font-size: 2rem;
   }
+
   h3 {
     font-size: 1.5rem;
   }
+
   h4 {
     font-size: 1.2rem;
   }
+
   p {
     font-size: 1rem;
   }
-    
+
 }
+
 @media (min-width: 480px) {
   h1 {
     font-size: 3.5rem;
   }
+
   h2 {
     font-size: 2.5rem;
   }
+
   h3 {
     font-size: 2rem;
   }
+
   h4 {
     font-size: 1.5rem;
   }
+
   p {
     font-size: 1.1rem;
 
   }
-    
+
 }
+
 @media (min-width: 768px) {
   h1 {
     font-size: 3.8rem;
   }
+
   h2 {
     font-size: 3rem;
   }
+
   h3 {
     font-size: 3.2rem;
   }
+
   h4 {
     font-size: 2.8rem;
   }
+
   p {
     font-size: 2.5rem;
 
   }
-    
+
 }
 
 
@@ -137,6 +162,7 @@ img {
   background-position: center center;
   position: relative;
 }
+
 .barra {
   position: absolute;
   width: 100%;
@@ -146,11 +172,14 @@ img {
   justify-content: flex-start;
   align-content: space-around;
 }
+
 .nav {
   width: 200rem;
   height: 15rem;
 }
+
 .navegacion {
+
   width: 65%;
   height: 100%;
   display: flex;
@@ -170,25 +199,31 @@ img {
   font-size: 1.5rem;
   text-align: center;
 }
+
 .nav-enlaces:hover {
   background-color: var(--blanco);
   color: var(--negro);
   border-radius: 0.5rem;
 }
+
 @media (min-width: 480px) {
   .barra {
     background-color: rgba(0, 0, 0, 0.3)
   }
+
   .nav {
     width: 150rem;
     height: 20rem;
   }
+
   .navegacion {
+
     width: 90%;
     height: 90%;
     flex-direction: row;
     justify-content: space-around;
   }
+
   .nav-enlaces {
     font-size: 2rem;
   }
@@ -203,6 +238,7 @@ img {
   background-size: cover;
   background-position: center center;
 }
+
 .made {
   width: 100%;
   height: 100%;
@@ -211,6 +247,7 @@ img {
   flex-wrap: wrap;
   align-content: flex-end;
 }
+
 .texto__made {
   color: var(--negro);
   font-size: 2rem;
@@ -238,6 +275,7 @@ img {
   height: 100%;
   object-fit: cover;
 }
+
 .destacados__text {
   position: absolute;
   bottom: 0;
@@ -247,9 +285,11 @@ img {
   margin: 0;
   padding: 1rem;
 }
+
 .destacados__item:nth-child(1) {
   grid-column-start: span 1;
 }
+
 .destacados__item:nth-child(2) {
   grid-column-start: span 1;
 }
@@ -262,11 +302,12 @@ img {
     padding: 10rem;
     grid-gap: 1rem;
   }
+
   .destacados__text {
     
   }
-    
-}
+
+
 
 /* 
 ┌┐┌┌─┐┌─┐┌─┐┌┬┐┬─┐┌─┐┌─┐
@@ -279,10 +320,12 @@ img {
   padding: 5rem;
   text-align: center;
 }
+
 .icon {
   max-width: 5rem;
   max-height: 5rem;
 }
+
 .nosotros__item {
   border-style: solid;
   font-family: var(--fuenteParrafo);
@@ -290,6 +333,7 @@ img {
   font-size: 3rem;
   text-align: center;
 }
+
 .nosotros__lista {
   border-style: solid;
   font-family: var(--fuenteParrafo);
@@ -297,12 +341,15 @@ img {
   font-size: 3rem;
   text-align: center;
 }
+
 @media (max-width: 768px) {
+
   .nosotros__lista,
   .nosotros__item h2,
   p {
     font-size: 1.5rem;
   }
+
   .nosotros {
     grid-template-columns: 1fr;
     grid-template-rows: 3fr;
@@ -319,6 +366,7 @@ img {
   justify-content: center;
   align-items: center;
 }
+
 /* 
 ┌─┐┌─┐┌┐┌┌┬┐┌─┐┌─┐┌┬┐┌─┐
 │  │ ││││ │ ├─┤│   │ │ │
@@ -333,12 +381,15 @@ img {
   padding: 2rem;
   grid-gap: 1rem;
 }
+
 .contacto__item: nth-child(1) {
   grid-column-start: span 1;
 }
+
 .contacto__item: nth-child(2) {
   grid-column-start: span 1;
 }
+
 .contacto__img {
   width: 100%;
   height: 100%;
@@ -348,6 +399,7 @@ img {
   background-size: cover;
   background-position: center center;
 }
+
 .form {
   font-family: var(--fuenteParrafo);
   font-size: 2rem;
@@ -355,6 +407,7 @@ img {
   display: flex;
   justify-content: space-around;
 }
+
 .campo input[type="text"],
 .campo input[type="tel"],
 .campo input[type="email"],
@@ -368,13 +421,15 @@ img {
 .fieldset {
   display: flex;
   justify-content: center;
-  
+
 }
+
 legend,
 label {
   color: var(--blanco);
   text-align: center;
 }
+
 .boton {
   display: flex;
   justify-content: center;
@@ -387,14 +442,17 @@ label {
   border: 0.1rem solid #77bcd3;
   border-radius: 1rem;
 }
+
 .btn:hover {
   background-color: var(--fondo);
   color: var(--hover);
 }
+
 @media (max-width: 768px) {
   .form {
     font-size: 3rem;
   }
+
   .contacto {
     grid-template-columns: 1fr;
     padding: 5rem;
@@ -406,10 +464,12 @@ label {
     background-size: cover;
     background-position: center center;
   }
+
   .contacto__img {
     background-image: none;
 
   }
+
   .contacto__item: nth-child(1) {
     grid-column-start: span 1;
   }
