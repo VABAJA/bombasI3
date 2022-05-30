@@ -303,12 +303,7 @@ img {
     padding: 10rem;
     grid-gap: 1rem;
   }
-
-  .destacados__text {
-    
-  }
-
-
+}
 
 /* 
 ┌┐┌┌─┐┌─┐┌─┐┌┬┐┬─┐┌─┐┌─┐
@@ -383,11 +378,11 @@ img {
   grid-gap: 1rem;
 }
 
-.contacto__item: nth-child(1) {
+.contacto__item:nth-child(1) {
   grid-column-start: span 1;
 }
 
-.contacto__item: nth-child(2) {
+.contacto__item:nth-child(2) {
   grid-column-start: span 1;
 }
 
@@ -471,7 +466,7 @@ label {
 
   }
 
-  .contacto__item: nth-child(1) {
+  .contacto__item:nth-child(1) {
     grid-column-start: span 1;
   }
 }

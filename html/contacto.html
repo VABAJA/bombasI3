@@ -1,81 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/normalize.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../css/styles.css" />
+<html lang="es-MX">
 
-    <title>BombasI3</title>
-  </head>
-  <body>
-    <header class="header">
-      <div class="barra">
-        <a class="logo" href="../index.html">Logo aquí</a>
-        <nav class="nav">
-          <ul class="navegacion">
-            <a class="nav-enlaces" href="../index.html"><li>Inicio</li></a>
-            <a class="nav-enlaces" href="./nosotros.html"
-              ><li>Nosotros</li></a
-            >
-            <a class="nav-enlaces" href="./catalogo.html"
-              ><li>Catálogo</li></a
-            >
-            <a class="nav-enlaces" href="./contacto.html"
-              ><li>Contacto</li></a
-            >
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/normalize.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+
+  <title>BombasI3</title>
+</head>
+
+<body>
+  <header class="header">
+    <span class="nav-bar" id="btnMenu"><i class="fa-solid fa-bars"></i>Menú</span>
+
+    <nav class="main-nav">
+      <ul class="menu" id="menu">
+        <li class="menu__item"><a href="../index.html" class="menu__link">Inicio</a></li>
+        <li class="menu__item"><a href="./nosotros.html" class="menu__link">Nosotros</a></li>
+        <li class="menu__item container-submenu">
+          <a href="#" class="menu__link submenu-btn">Catálogo <i class="fa-solid fa-chevron-down"></i></a>
+          <ul class="submenu">
+            <li class="menu__item"><a href="./catalogo.html" class="menu__link">Bombas</a></li>
+            <li class="menu__item"><a href="./catalogo.html" class="menu__link">Accesorios</a></li>
+            <li class="menu__item"><a href="./catalogo.html" class="menu__link">Algo más</a></li>
+            <li class="menu__item"><a href="./catalogo.html" class="menu__link">Otra más</a></li>
           </ul>
-        </nav>
-      </div>
-    </header>
+        </li>
+        <li class="menu__item"><a href="./contacto.html" class="menu__link">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
   <main>
-    <!-- <img class="icon" src="../img/notas.png" alt="notas"> -->
+    
     <div class="contacto">
 
       <div class="contacto__item">
-        <form class="form" action="#">
+        <form class="form" action="../contacto.php">
           <div class="fieldset">
             <fieldset>
               <legend>¡Contáctanos! estaremos felices de atenderte.</legend>
               <div class="campo">
-                <label for="tuNombre" id="lbnombre">Nombre</label>
+                <label for="tuNombre" id="name">Nombre</label>
                 <br />
-                <input class="input" type="text" name="tuNombre" />
-                <br />
-              </div>
-              <div class="campo">
-                <label for="tuCorreo" id="lbcorreo">Correo</label>
-                <br />
-                <input type="email" name="tuCorreo" />
+                <input class="input" type="text" name="name" />
                 <br />
               </div>
               <div class="campo">
-                <label for="TuNumero" id="lbnumero">Número</label>
+                <label for="tuCorreo" id="mail">Correo</label>
                 <br />
-                <input type="text" name="tuNumero" />
+                <input type="email" name="mail" />
                 <br />
               </div>
               <div class="campo">
-                <label for="tuMensaje" id="lbmsg">Mensaje</label>
+                <label for="TuNumero" id="phone">Número</label>
                 <br />
-                <textarea name="tuMensaje" id="msg" cols="30" rows="10"></textarea>
+                <input type="text" name="phone" />
+                <br />
+              </div>
+              <div class="campo">
+                <label for="TuCiudad" id="city">Ciudad</label>
+                <br />
+                <input type="text" name="city" />
+                <br />
+              </div>
+              <div class="campo">
+                <label for="tuMensaje" id="message">Mensaje</label>
+                <br />
+                <textarea name="message" id="msg" cols="30" rows="10"></textarea>
               </div>
               <div class="boton">
-                <input class="btn" type="submit" value="Enviar" />
+                <input class="btn" id="Enviar" type="submit" value="Enviar" />
               </div>
             </fieldset>
           </div>
 
         </form>
 
-        
+
       </div>
       <div class="contacto__item">
         <div class="contacto__img">
@@ -95,6 +101,8 @@
       </p>
     </div>
   </footer>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../js/app.js"></script>
 </body>
 
 </html>
