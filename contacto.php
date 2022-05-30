@@ -47,6 +47,7 @@
     $asunto = 'Mensaje de Formulario Web';
 
     mail($para, $asunto, utf8_decode($message), $header);
+    header("Location:./html/confirmacion.html");
   /* } else {
     echo "Captcha invalido";
   }
